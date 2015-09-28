@@ -22,6 +22,7 @@ def display_choices():
     choice = -1
     print "Pick Your Choice:"
     print "1. Adding 2 numbers."
+    print "2. Subtract 2 numbers"
     choice = int(raw_input())
     return choice
 
@@ -32,6 +33,8 @@ def main():
         print "PROGRAM NOT COMPLETED"
     if choice is 1:
          add()
+    if choice is 2:
+        sub()
 def take_numbers():
     print "Enter the 2 numbers."
     input1 = int(raw_input("Enter your 1st number "))
@@ -40,5 +43,9 @@ def take_numbers():
 def add():
     inp1,inp2 = take_numbers()
     out = inp1 + inp2
+    print out
+def sub():
+    inp1,inp2 = take_numbers()
+    out = inp1 - inp2
     print out
 main()
