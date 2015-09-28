@@ -24,6 +24,7 @@ def display_choices():
     print "1. Adding 2 numbers."
     print "2. Subtract 2 numbers"
     print "3. Multiply 2 numbers"
+    print "4. Divide 2 numbers"
     choice = int(raw_input())
     return choice
 
@@ -38,6 +39,8 @@ def main():
         sub()
     if choice is 3:
         mul()
+    if choice is 4:
+        div()
 def take_numbers():
     print "Enter the 2 numbers."
     input1 = int(raw_input("Enter your 1st number "))
@@ -55,4 +58,14 @@ def mul():
     inp1,inp2 = take_numbers()
     out = inp1 * inp2
     print out
+def div():
+    inp1,inp2 = take_numbers()
+    if inp2 is not 0:
+        out = inp1/inp2
+        print out
+    if inp2 is 0:
+        print "Enter a second non-zero number"
+        inp2 = int(raw_input())
+        out = inp1/inp2
+        print out    
 main()
